@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/Player.cs" id="1_player"]
+
+[sub_resource type="RectangleShape2D" id="body_shape"]
+size = Vector2(24, 40)
+
+[sub_resource type="CircleShape2D" id="upload_shape"]
+radius = 100.0
+
+[sub_resource type="RectangleShape2D" id="tag_shape"]
+size = Vector2(28, 24)
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
+motion_mode = 1
+script = ExtResource("1_player")
+
+[node name="Visual" type="Node2D" parent="."]
+texture_filter = 1
+
+[node name="ClothesSprite" type="Sprite2D" parent="Visual"]
+scale = Vector2(2, 2)
+
+[node name="SkinSprite" type="Sprite2D" parent="Visual"]
+scale = Vector2(2, 2)
+
+[node name="BodyShape" type="CollisionShape2D" parent="."]
+shape = SubResource("body_shape")
+
+[node name="UploadArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+
+[node name="UploadShape" type="CollisionShape2D" parent="UploadArea"]
+shape = SubResource("upload_shape")
+
+[node name="TagArea" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+monitorable = false
+
+[node name="TagShape" type="CollisionShape2D" parent="TagArea"]
+shape = SubResource("tag_shape")
+disabled = true
+
+[node name="TagFlash" type="ColorRect" parent="TagArea"]
+visible = false
+offset_left = -14.0
+offset_top = -12.0
+offset_right = 14.0
+offset_bottom = 12.0
+color = Color(1, 1, 1, 0.5)
+
+[node name="TagSound" type="AudioStreamPlayer2D" parent="."]
+[node name="GlitchSound" type="AudioStreamPlayer2D" parent="."]
+[node name="FootstepPlayer" type="AudioStreamPlayer2D" parent="."]

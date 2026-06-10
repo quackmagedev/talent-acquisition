@@ -1,0 +1,21 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalentAcquisition", "TalentAcquisition.csproj", "{B5C7E33A-1F2D-4A6E-9C3B-7D8E2F4A5B6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5C7E33A-1F2D-4A6E-9C3B-7D8E2F4A5B6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C7E33A-1F2D-4A6E-9C3B-7D8E2F4A5B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C7E33A-1F2D-4A6E-9C3B-7D8E2F4A5B6C}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{B5C7E33A-1F2D-4A6E-9C3B-7D8E2F4A5B6C}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{B5C7E33A-1F2D-4A6E-9C3B-7D8E2F4A5B6C}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{B5C7E33A-1F2D-4A6E-9C3B-7D8E2F4A5B6C}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

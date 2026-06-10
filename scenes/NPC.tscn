@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/NPC.cs" id="1_npc"]
+
+[sub_resource type="RectangleShape2D" id="body_shape"]
+size = Vector2(24, 40)
+
+[node name="NPC" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 7
+motion_mode = 1
+script = ExtResource("1_npc")
+
+[node name="Visual" type="Node2D" parent="."]
+texture_filter = 1
+
+[node name="ClothesSprite" type="Sprite2D" parent="Visual"]
+scale = Vector2(2, 2)
+
+[node name="SkinSprite" type="Sprite2D" parent="Visual"]
+scale = Vector2(2, 2)
+
+[node name="BodyShape" type="CollisionShape2D" parent="."]
+shape = SubResource("body_shape")
+
+[node name="AcquiredMarker" type="ColorRect" parent="."]
+visible = false
+offset_left = -5.0
+offset_top = -42.0
+offset_right = 5.0
+offset_bottom = -32.0
+
+[node name="StateTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+[node name="PanicSound" type="AudioStreamPlayer2D" parent="."]
+[node name="FootstepPlayer" type="AudioStreamPlayer2D" parent="."]
